@@ -18,7 +18,7 @@ export default async function Brands() {
   <div className="container">
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-4">
     
-   {Brands.map((brand)=> <div key={brand._id}>  
+   {Brands?.map((brand)=> <div key={brand._id}>  
   <Card>
     <Link href={'/brands/'+brand._id}>
   <CardContent>
