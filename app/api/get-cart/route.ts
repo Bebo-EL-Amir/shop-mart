@@ -3,7 +3,7 @@ import { CartResponse } from "@/interfaces"
 import { NextResponse } from "next/server"
 
 export async function GET() {
-    const token =  getUserToken()
+    const token =  await getUserToken()
     const response=await fetch (`${process.env.API_URL}/cart`,{
           headers:{
               token:token!

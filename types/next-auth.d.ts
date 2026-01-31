@@ -1,19 +1,19 @@
-import { UserResponse } from "@/interfaces"
-
+import { UserResponse } from "@/interfaces";
 
 declare module "next-auth" {
-  
   interface Session {
-      user:UserResponse
+    user: UserResponse;
   }
   interface User {
-    user: UserResponse
-    token: string
+    user: UserResponse;
+    token: string;
   }
 }
-import { JWT } from "next-auth/jwt"
+import { JWT } from "next-auth/jwt";
 
 declare module "next-auth/jwt" {
-  
-  interface JWT extends User{}
+  interface JWT {
+    token: string;
+    user: UserResponse;
+  }
 }
