@@ -12,7 +12,7 @@ export default async function Categories() {
   <div className="container">
     <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-4">
     
-  {Categories.map((category)=> <div key={category._id}>
+  {Categories?.map((category)=> <div key={category._id}>
     <Card>
     <Link href={'/categories/'+category._id}>
   <CardContent>
